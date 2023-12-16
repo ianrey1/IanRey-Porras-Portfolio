@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background-color: #0f0f0f;
+
+}
+
+
+
+.button {
+    display: flex;
+  }
+  
+  .box {
+    width: 50px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    transition: all .8s;
+    cursor: pointer;
+    position: relative;
+    background: rgb(117, 119, 119);
+    overflow: hidden;
+  }
+  
+  .box:before {
+      content: "P";
+      position: absolute;
+      top: 0;
+      background: #0f0f0f;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(101%);
+      transition: transform .4s;
+  }
+  
+  .box:nth-child(2)::before {
+      transform: translateY(-100%);
+      content: 'O';
+  }
+  
+  .box:nth-child(3)::before {
+      content: 'R';
+  }
+  
+  .box:nth-child(4)::before {
+      transform: translateY(-100%);
+      content: 'T';
+  }
+  
+  .box:nth-child(5)::before {
+      content: 'F';
+  }
+  
+  .box:nth-child(6)::before {
+      transform: translateY(-100%);
+      content: 'O';
+  }
+  
+  .box:nth-child(7)::before {
+      content: 'L';
+  }
+  
+  .box:nth-child(8)::before {
+      transform: translateY(-100%);
+      content: 'I';
+  }
+  
+  .box:nth-child(9)::before {
+      content: 'O';
+  }
+  
+  .button:hover .box:before {
+      transform: translateY(0);
+  }
+
+
+
+
+
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(35, 36, 36);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 50px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: url('asset/Image/bgimg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 700px;
+
+}
+
+.home-content h3 {
+    font-size: 38px;
+    font-weight: 720;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: rgb(249, 0, 0);
+}
+
+.home-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 26px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(117, 119, 119);
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+    background: rgb(117, 119, 119);
+    color: #081b29;
+    box-shadow: 0 0 20px rgb(117, 119, 119);
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(117, 119, 119);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #001b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px black,
+        0 0 25px rgb(117, 119, 119)
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px rgb(117, 119, 119), 0 0 25px black, 0 0 50px black, 0 0 100px black, 0 0 200px rgb(117, 119, 119)
+}
+
+
+
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    /* Styles to apply when the screen width is 768 pixels or less */
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .navbar a {
+        font-size: 16px; /* Adjust navigation link font size for smaller screens */
+    }
+
+    /* Add more styles as needed for responsiveness */
+}
+
+
+
+
+
+
+

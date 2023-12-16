@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #ededed;
+  background-color: #000000;
+
+}
+
+.button {
+  display: flex;
+}
+
+
+
+.button {
+  display: flex;
+}
+
+.box {
+  width: 50px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  transition: all .8s;
+  cursor: pointer;
+  position: relative;
+  background: rgb(117, 119, 119);
+  overflow: hidden;
+}
+
+.box:before {
+  content: "P";
+  position: absolute;
+  top: 0;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform .4s;
+}
+
+.box:nth-child(2)::before {
+  transform: translateY(-100%);
+  content: 'O';
+}
+
+.box:nth-child(3)::before {
+  content: 'R';
+}
+
+.box:nth-child(4)::before {
+  transform: translateY(-100%);
+  content: 'T';
+}
+
+.box:nth-child(5)::before {
+  content: 'F';
+}
+
+.box:nth-child(6)::before {
+  transform: translateY(-100%);
+  content: 'O';
+}
+
+.box:nth-child(7)::before {
+  content: 'L';
+}
+
+.box:nth-child(8)::before {
+  transform: translateY(-100%);
+  content: 'I';
+}
+
+.box:nth-child(9)::before {
+  content: 'O';
+}
+
+.button:hover .box:before {
+  transform: translateY(0);
+}
+
+
+
+
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 50px;
+  transition: .3s;
+  opacity: 0;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+
+}
+
+.navbar a:hover {
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: rgb(35, 36, 36);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.btn-box {
+  display: inline-block;
+  padding: 20px 50px;
+  background: rgb(117, 119, 119);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #001b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1s;
+  box-shadow: 0 0 5px black, 0 0 25px rgb(117, 119, 119);
+}
+
+.btn-box:hover {
+  box-shadow: 0 0 5px rgb(117, 119, 119), 0 0 25px black, 0 0 50px black, 0 0 100px black, 0 0 200px rgb(117, 119, 119)
+}
+
+
+
+
+@keyframes slideTop {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+/*header styles*/
+
+
+
+
+
+
+.skills{
+
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 70vh;
+  overflow: hidden;
+}
+
+
+
+
+.sub-title {
+  text-align: center;
+  font-size: 100px;
+  padding-bottom: 70px;
+  padding-top: 100px;
+  opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+
+}
+@keyframes slideTop {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+.sub-title span {
+  color: red;
+}
+
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container1 {
+  width: 600px;
+  max-width: 500x;
+  padding: 75px 90px;
+  margin-bottom: 120px;
+}
+
+.heading1 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.bar {
+  font-size: 23px;
+}
+
+.Technical-bars .bar {
+  margin: 40px 0;
+}
+
+.Technical-bars .bar:first-child {
+  margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+  margin-bottom: 0;
+}
+
+.Technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.Technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(117, 119, 119);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.Technical-bars .bar .progress-line span {
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate is 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.progress-line.html span {
+  width: 45%;
+}
+
+.progress-line.css span {
+  width: 35%;
+}
+
+.progress-line.javascript span {
+  width: 20%;
+}
+
+.progress-line.java span {
+  width: 39%;
+}
+
+.progress-line span::after {
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+.progress-line.html span::after {
+  content: "45%";
+}
+
+.progress-line.css span::after {
+  content: "35%";
+}
+
+.progress-line.javascript span::after {
+  content: "20%";
+}
+
+.progress-line.java span::after {
+  content: "39%";
+}
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+
+
+}
+
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.radial-bars {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.radial-bars .radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+  stroke-width: 10;
+  stroke: rgb(117, 119, 119);
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+
+
+
+}
+
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+
+.path {
+  stroke-width: 10;
+  stroke: red;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+.path-1 {
+  animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+  animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+  animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4 {
+  animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+  100% {
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes animate-path2 {
+  100% {
+    stroke-dashoffset: 175;
+  }
+}
+
+@keyframes animate-path3 {
+  100% {
+    stroke-dashoffset: 125;
+  }
+}
+@keyframes animate-path4 {
+  100% {
+    stroke-dashoffset: 75;
+
+  }
+}
+
+.radial-bar .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 500;
+  animation: showText 0.5 1s linear forwards;
+  opacity: 0;
+}
+
+.progress-bar .text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
